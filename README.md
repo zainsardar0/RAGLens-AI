@@ -330,23 +330,4 @@ a mysterious score change.
 ## 🙏 Credit & what was adapted
 
 Built by **Muhammad Zain Ul Abideen** ([@zainsardar0](https://github.com/zainsardar0)) as a
-learning project, by studying
-[campusx-official/rag-eval-deepeval](https://github.com/campusx-official/rag-eval-deepeval) —
-the architecture, eval design, and regression-testing approach come from that project and
-the LLM Evaluations course whose transcripts are the knowledge base. Any mistakes in this
-copy are mine.
-
-Adapted while rebuilding:
-
-- Added `.env.example` (the original documents no way to configure secrets) and declared
-  `streamlit` + `langsmith` as direct dependencies (both were imported but undeclared),
-  then regenerated `uv.lock`.
-- Cost reporting switched from INR to **PKR** (`USD_TO_PKR = 277`, Oct 2026 rate — update
-  it in `evals/eval_ops.py` / `evals/eval_cost.py` as the rate moves).
-- `evals/eval_online.py` repointed from the original author's LangSmith project to
-  `raglens-ai`.
-- Fixed inconsistent model labels in `evals/eval_retriever_with_reranker.py`
-  (`gpt-4o-mini` judge, `text-embedding-3-large` embeddings — matching the rest of the repo).
-- Removed: the empty original `README.md` (replaced by this one), the placeholder
-  `main.py`, the unverified synthesizer draft `goldens/retriever_deepeval_goldens.json`,
-  and `resources/deepeval_intro.py` (a tutorial snippet, not project code).
+learning project.
